@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "com.github.ouchi-haruki-1125"
-version = "0.9.17"
+version = "0.9.18"
 
 kotlin {
     jvm()
