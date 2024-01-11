@@ -5,6 +5,7 @@ plugins {
     id("org.jetbrains.compose")
     id("maven-publish")
     id("signing")
+    id("java")
 }
 
 group = "com.github.ouchi-haruki-1125"
@@ -76,4 +77,9 @@ publishing {
             }
         }
     }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
