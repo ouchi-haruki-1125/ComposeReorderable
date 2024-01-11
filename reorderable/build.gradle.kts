@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "com.github.ouchi-haruki-1125"
-version = "0.9.15"
+version = "0.9.16"
 
 kotlin {
     jvm()
