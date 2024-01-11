@@ -7,7 +7,7 @@ plugins {
     id("signing")
 }
 
-group = "org.burnoutcrew.composereorderable"
+group = "com.github.ouchi-haruki-1125"
 version = "0.9.8"
 
 kotlin {
@@ -76,8 +76,4 @@ publishing {
             }
         }
     }
-}
-
-signing {
-    sign(publishing.publications)
 }
