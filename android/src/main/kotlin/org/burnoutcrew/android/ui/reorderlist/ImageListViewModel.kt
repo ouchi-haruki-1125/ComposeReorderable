@@ -22,7 +22,6 @@ import androidx.lifecycle.ViewModel
 import org.burnoutcrew.reorderable.ItemPosition
 import kotlin.random.Random
 
-
 class ImageListViewModel : ViewModel() {
     val headerImage = "https://picsum.photos/seed/compose${Random.nextInt(Int.MAX_VALUE)}/400/200"
     val footerImage = "https://picsum.photos/seed/compose${Random.nextInt(Int.MAX_VALUE)}/400/200"
