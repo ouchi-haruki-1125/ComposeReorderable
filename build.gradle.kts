@@ -8,7 +8,7 @@ plugins {
 
 ext {
     extra["compileSdkVersion"] = 33
-    extra["minSdkVersion"] = 21
+    extra["minSdkVersion"] = 24
     extra["targetSdkVersion"] = 33
 }
 
