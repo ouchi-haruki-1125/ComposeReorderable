@@ -11,7 +11,11 @@ group = "com.github.ouchi-haruki-1125"
 version = "0.9.7"
 
 kotlin {
-    jvm()
+    jvm {
+        compilations.all {
+            kotlinOptions.jvmTarget = "17"
+        }
+    }
     js(IR) {
         browser()
         binaries.executable()
@@ -25,6 +29,11 @@ kotlin {
             }
         }
     }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 val javadocJar = tasks.register("javadocJar", Jar::class.java) {
