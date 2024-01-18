@@ -7,7 +7,7 @@ plugins {
     id("signing")
 }
 
-group = "org.burnoutcrew.composereorderable"
+group = "com.github.ouchi-haruki-1125"
 version = "0.9.7"
 
 kotlin {
