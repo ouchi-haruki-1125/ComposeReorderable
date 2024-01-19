@@ -16,8 +16,14 @@ dependencies {
     implementation("io.coil-kt:coil-compose:2.2.2")
 }
 
-android {
+kotlin {
+    jvmToolchain(17)
+}
 
+android {
+    kotlin {
+        jvmToolchain(17)
+    }
     sourceSets {
         map { it.java.srcDir("src/${it.name}/kotlin") }
     }
@@ -37,8 +43,5 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
-    kotlinOptions {
-        jvmTarget = "17"
-    }
     namespace = "org.burnoutcrew.android"
 }

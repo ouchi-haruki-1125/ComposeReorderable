@@ -10,8 +10,16 @@ plugins {
 group = "com.github.ouchi-haruki-1125"
 version = "0.9.7"
 
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>()
+    .configureEach {
+        kotlinOptions {
+            // targetCompatibilityと揃える
+            jvmTarget = JavaVersion.VERSION_17.toString()
+        }
+    }
+
 kotlin {
-    jvmToolchain(18)
+    jvm()
     js(IR) {
         browser()
         binaries.executable()
@@ -24,12 +32,6 @@ kotlin {
                 implementation("org.jetbrains.compose.ui:ui-util:${composeVersion}")
             }
         }
-    }
-}
-
-java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(18))
     }
 }
 

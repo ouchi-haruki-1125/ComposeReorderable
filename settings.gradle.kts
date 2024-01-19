@@ -7,11 +7,14 @@ pluginManagement {
     }
     
 }
-rootProject.name = "ComposeReorderList"
 
+plugins {
+    id("org.gradle.toolchains.foojay-resolver") version("0.4.0")
+}
+
+rootProject.name = "ComposeReorderList"
 
 include(":android")
 include(":desktop")
 include(":reorderable")
 include(":web")
-
