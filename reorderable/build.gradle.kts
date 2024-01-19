@@ -11,7 +11,7 @@ group = "com.github.ouchi-haruki-1125"
 version = "0.9.7"
 
 kotlin {
-    jvm()
+    jvmToolchain(18)
     js(IR) {
         browser()
         binaries.executable()
@@ -24,6 +24,12 @@ kotlin {
                 implementation("org.jetbrains.compose.ui:ui-util:${composeVersion}")
             }
         }
+    }
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(18))
     }
 }
 
@@ -76,8 +82,4 @@ publishing {
             }
         }
     }
-}
-
-signing {
-    sign(publishing.publications)
 }
